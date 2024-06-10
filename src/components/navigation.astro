@@ -1,0 +1,33 @@
+---
+import '../styles/global.css'
+const { props } = Astro.props;
+import Collapse from "./collapse.astro";
+import NavigationDesktop from "./navigation-type/navigationDesktop.astro";
+import NavigationMobile from "./navigation-type/navigationMobile.astro";
+import type { ActionError } from "astro:actions";
+import "../styles/navigation/desktop-nav.css";
+import "../styles/navigation/mobile-nav.css";
+const navlist = [
+  {
+    title: "home",
+    url: "/home",
+  },
+  {
+    title: "about",
+    url: "/about",
+  },
+  {
+    title: "contact",
+    url: "/contact",
+  },
+];
+---
+
+<Collapse />
+<!-- navigation desktop -->
+<div id="nav-container" class="nav-container-class">
+  <!-- nav desktop -->
+  <NavigationDesktop {...{ navlist }} />
+  <!-- nav mobile -->
+  <NavigationMobile {...{ navlist }} />
+</div>
