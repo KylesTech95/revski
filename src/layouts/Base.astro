@@ -1,7 +1,6 @@
 ---
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
-import Glow from '../components/glow.astro';
 const { title } = Astro.props;
 ---
 
@@ -11,12 +10,17 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <!-- titles prop -->
     <title>{title}</title>
   </head>
   <body>
+    <!-- header -->
     <Header />
     <slot />
-    <Glow></Glow>
+    
+    <!-- footer -->
     <Footer />
   </body>
+  <!-- highlight the current link in navigation -->
+  <script src="../assets/navigation/currentPage.js"></script>
 </html>

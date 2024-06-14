@@ -10,3 +10,5 @@ button.onclick = (e) => {
   handleSwitch(nav_container,e.currentTarget,counter)
   handleIcon(e.currentTarget,counter)
 };
+
+export default counter;
