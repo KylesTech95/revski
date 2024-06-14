@@ -6,16 +6,18 @@ let one,two,three;
     three = children[2]
 if(/1/.test(counter)){
     two.style.opacity = 0;
-    // rotate two 45 deg
+    two.style.transform='translate(0,18px) '
+    // rotate one 45 deg
     one.style.transform='rotate(45deg) translate(20px,18px) '
     // rotate three -45 deg
     three.style.transform='rotate(-45deg)'
 }
 else{
     two.style.opacity = 1;
-    // rotate two -45 deg
+    two.style.transform='translate(0,0) '
+    // rotate one 0 deg
     one.style.transform='rotate(0deg)'
-    // rotate three 45 deg
+    // rotate three 0 deg
     three.style.transform='rotate(0deg)'
 }
 }
