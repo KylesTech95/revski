@@ -6,17 +6,12 @@ const array = [desktop_links, mobile_links];
 const title = document.querySelector('title')
 const nav = document.querySelector('.nav-fixed-class')
 
+// For each (desktop & mobile) arrays of links
 array.forEach((row, index) => {
+    // capture current href/url
  let currentHref = ifURLMatchesHref(row, window)[0]
+ // store custom class into variable
  const bottomBorder = 'border-bottom'
+ // add class to current href/url
  currentHref.classList.add(bottomBorder)
 });
-window.addEventListener('click',e=>{
-    const navEdgePosition = nav.getBoundingClientRect().x+nav.clientWidth
-    if(window.innerWidth <= 750){
-        console.log(nav)
-        if(e.pageX > navEdgePosition){
-            
-        }
-    }
-})

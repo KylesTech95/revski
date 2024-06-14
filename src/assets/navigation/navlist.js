@@ -1,3 +1,4 @@
+// navlist data
 const navlist = [
   {
     title: "home",
