@@ -1,22 +1,22 @@
 ---
-const {navlist} = Astro.props
-import '../../styles/global.css'
-
+const { navlist } = Astro.props;
+import "../../styles/global.css";
 ---
+
 <div id="nav-container-id" class="nav-container-class">
+  <nav id="nav-menu" class="menu_nav">
+    <ul class="nav-list list-nav list-container container-list"></ul>
     {
-      navlist.map((item, index) => {
+      navlist.map((item: { url: string | URL; title: unknown }, index: any) => {
         return (
-          <nav id="nav-menu" class="menu_nav">
-            <ul class="nav-list list-nav list-container container-list">
-              <li class="li">
-                <a class="art" href={item.url}>
-                  {item.title}
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <li class="li">
+            <a class="art" href={item.url}>
+              {item.title}
+            </a>
+          </li>
         );
       })
     }
-  </div>
+  </nav>
+  
+</div>

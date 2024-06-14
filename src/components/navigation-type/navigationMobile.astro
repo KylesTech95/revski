@@ -3,19 +3,23 @@ const { navlist } = Astro.props;
 ---
 
 <div id="nav-container-id-mobile" class="nav-container-class-mobile">
-  {
-    navlist.map((item, index) => {
-      return (
-        <nav id="nav-fixed-id" class="nav-fixed-class">
-          <ul class="nav-list-mobile list-nav-mobile list-container-mobile container-list-mobile">
-            <li class="li">
-              <a class="art" href={item.url}>
-                {item.title}
-              </a>
-            </li>
-          </ul>
-        </nav>
-      );
-    })
-  }
+  <nav id="nav-fixed-id" class="nav-fixed-class">
+    <ul
+      class="nav-list-mobile list-nav-mobile list-container-mobile container-list-mobile"
+    >
+      {
+        navlist.map(
+          (item: { url: string | URL; title: unknown }, index: any) => {
+            return (
+              <li class="li">
+                <a class="art" href={item.url}>
+                  {item.title}
+                </a>
+              </li>
+            );
+          }
+        )
+      }
+    </ul>
+  </nav>
 </div>

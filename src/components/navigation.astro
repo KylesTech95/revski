@@ -4,30 +4,15 @@ const { props } = Astro.props;
 import Collapse from "./collapse.astro";
 import NavigationDesktop from "./navigation-type/navigationDesktop.astro";
 import NavigationMobile from "./navigation-type/navigationMobile.astro";
-import type { ActionError } from "astro:actions";
-import "../styles/navigation/desktop-nav.css";
-import "../styles/navigation/mobile-nav.css";
-const navlist = [
-  {
-    title: "home",
-    url: "/home",
-  },
-  {
-    title: "about",
-    url: "/about",
-  },
-  {
-    title: "contact",
-    url: "/contact",
-  },
-];
+import navlist from '../assets/navigation/navlist'
 ---
-
+<!-- hamburger -->
 <Collapse />
 <!-- navigation desktop -->
-<div id="nav-container" class="nav-container-class">
+<div id="nav-container" class="nav-container-class hide-nav">
   <!-- nav desktop -->
   <NavigationDesktop {...{ navlist }} />
   <!-- nav mobile -->
   <NavigationMobile {...{ navlist }} />
+  <script src='../assets/navigation/hamburger.js'></script>
 </div>
