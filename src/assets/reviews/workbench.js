@@ -13,7 +13,18 @@ const moveWorkBenchToTop = (wb) => {
     }
 }
 moveWorkBenchToBottom(footer,wb)
-window.onresize = e =>{
+// window.onresize = e =>{
+//     moveWorkBenchToBottom(footer,wb)
+//     moveWorkBenchToTop(wb)
+// }
+
+window.onload=e=>{
+    document.getElementById('canvas').height = window.innerHeight - 475;
+    document.getElementById('canvas').width = window.innerWidth-100
+}
+window.onresize=e=>{
     moveWorkBenchToBottom(footer,wb)
     moveWorkBenchToTop(wb)
+    document.getElementById('canvas').height = window.innerHeight - 475;
+    document.getElementById('canvas').width = window.innerWidth-100
 }

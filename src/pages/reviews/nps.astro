@@ -2,9 +2,11 @@
 import Base from "../../layouts/base.astro";
 import Workbench from "../../layouts/workbench.astro";
 const title = "Nps";
+import Canvas from "../../components/canvas.astro";
 ---
 
 <Base {...{ title }}>
   <Workbench />
 </Base>
+<Canvas/>
 <script src="../../assets/reviews/workbench.js"></script>

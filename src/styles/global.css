@@ -247,13 +247,13 @@ body {
   justify-content: start;
   gap: 24px;
   padding: 12px 0 0 12px;
-  overflow:hidden;
-  overflow-x:scroll;
+  overflow: hidden;
+  overflow-x: scroll;
 }
 .wb-column::-webkit-scrollbar {
   display: none;
 }
-.wb-column{
+.wb-column {
   scrollbar-width: none;
 }
 .no-style {
@@ -261,4 +261,17 @@ body {
 }
 .resize {
   transform: scale(2.25);
+}
+
+/* canvas */
+#canvas-container {
+  border: 16px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#canvas {
+  background: #fff;
+  resize:both;
 }
