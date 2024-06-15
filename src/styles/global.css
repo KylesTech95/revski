@@ -233,6 +233,9 @@ body {
     flex-direction: column;
     height: 75%;
   }
+  #canvas-container{
+    transform:translate(0,-80px)
+  }
 }
 
 .wb-column {
@@ -273,5 +276,4 @@ body {
 }
 #canvas {
   background: #fff;
-  resize:both;
 }

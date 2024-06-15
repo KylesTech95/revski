@@ -15,4 +15,4 @@ button.onclick = (e) => {
   handleIcon(e.currentTarget,counter)
 };
 
-export default counter;
+export default {button};

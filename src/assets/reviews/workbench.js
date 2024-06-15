@@ -19,12 +19,12 @@ moveWorkBenchToBottom(footer,wb)
 // }
 
 window.onload=e=>{
-    document.getElementById('canvas').height = window.innerHeight - 475;
-    document.getElementById('canvas').width = window.innerWidth-100
+    document.getElementById('canvas').style.height = window.innerHeight - (window.innerWidth>750 ? 350 : 325) +"px";
+    document.getElementById('canvas').style.width = window.innerWidth-100 +"px"
 }
 window.onresize=e=>{
     moveWorkBenchToBottom(footer,wb)
     moveWorkBenchToTop(wb)
-    document.getElementById('canvas').height = window.innerHeight - 475;
-    document.getElementById('canvas').width = window.innerWidth-100
+    document.getElementById('canvas').style.height = window.innerHeight - (window.innerWidth>750 ? 350 : 325) +"px";
+    document.getElementById('canvas').style.width = window.innerWidth-100 +"px"
 }
