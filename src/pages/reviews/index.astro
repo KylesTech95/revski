@@ -1,6 +1,10 @@
 ---
 import Base from "../../layouts/Base.astro";
-const title = "Reviews page"
+import Options from "../../components/options.astro";
+import optionlist from "../../assets/reviews/optionlist";
+const title = "Reviews page";
 ---
 
-<Base title={title}></Base>
+<Base title={title}>
+  <Options {...{optionlist}} />
+</Base>

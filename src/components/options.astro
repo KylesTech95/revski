@@ -1,0 +1,19 @@
+---
+import "../styles/global.css";
+const folder = "/reviews"
+const {optionlist} = Astro.props
+---
+
+<div class="option-container">
+  {
+    optionlist.map(
+      (option: { url: string | URL; title: unknown }, index: any) => {
+        return (
+          <a class="option-art" href={folder+option.url}>
+            {option.title}
+          </a>
+        );
+      }
+    )
+  }
+</div>
