@@ -1,3 +1,4 @@
+/* root information */
 :root {
   --font-family-default: Arial, Helvetica, sans-serif;
   --font-color: ghostwhite;
@@ -17,6 +18,8 @@
   user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
 }
+
+/* body / layouts/Base.astro*/
 body {
   background-image: linear-gradient(
     rgba(238, 130, 238, 0.822),
@@ -51,6 +54,7 @@ body {
     filter: blur(15px);
   }
 }
+/* navigation */
 .nav-container-class {
   height: 40px;
   width: 100%;
@@ -85,6 +89,7 @@ body {
   justify-content: center;
 }
 
+/* article/option tags */
 .art,
 .option-art {
   color: var(--font-color);
@@ -112,13 +117,16 @@ body {
   justify-content: center;
   align-items: center;
 }
-.li {
+.li,
+.no-style {
   list-style-type: none;
 }
 .border-bottom {
   border-bottom: 4px solid rgb(213, 80, 80);
   padding: 0 0 3.25px 0;
 }
+
+/* collapse hamburger/icon */
 .collapse-container {
   position: fixed;
   top: 15px;
@@ -149,6 +157,8 @@ body {
 .col-black {
   background: #000;
 }
+
+/* footer */
 #footer-id {
   height: 100px;
   width: 100%;
@@ -157,6 +167,16 @@ body {
   bottom: 0;
   left: 0;
   z-index: 992;
+}
+/* workbench */
+#workbench-container {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  display: flex;
+  overflow: hidden;
 }
 /* media query - mobile use - portrait */
 @media screen and (max-width: 750px) {
@@ -181,11 +201,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
   }
-  .nav-container-class {
-    height: 100vh;
-    width: 85px;
-    justify-content: start;
-  }
+  /* article and list items */
   .art {
     font-size: var(--font-size-nav-mobile);
   }
@@ -194,7 +210,10 @@ body {
   }
   #nav-container-id-mobile {
     height: 100%;
-    width: inherit;
+    width: 85px;
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,11 +226,39 @@ body {
   }
   .option-art {
     border: 1px solid #333;
-    border-left:none;
-    border-right:none;
+    border-left: none;
+    border-right: none;
   }
   .option-container {
     flex-direction: column;
     height: 75%;
   }
+}
+
+.wb-column {
+  height: inherit;
+  max-width: 100%;
+  min-width: 115px;
+  width: 100%;
+  border: 5px double #333;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 24px;
+  padding: 12px 0 0 12px;
+  overflow:hidden;
+  overflow-x:scroll;
+}
+.wb-column::-webkit-scrollbar {
+  display: none;
+}
+.wb-column{
+  scrollbar-width: none;
+}
+.no-style {
+  cursor: grab;
+}
+.resize {
+  transform: scale(2.25);
 }

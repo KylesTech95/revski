@@ -1,6 +1,10 @@
 ---
-import Base from "../../layouts/Base.astro"
-const title = 'Obaording'
+import Base from "../../layouts/base.astro";
+const title = "Obaording";
+import Workbench from "../../layouts/workbench.astro";
 ---
 
-<Base title={title} />
+<Base {...{ title }}>
+  <Workbench />
+</Base>
+<script src="../../assets/reviews/workbench.js"></script>

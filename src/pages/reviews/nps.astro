@@ -1,6 +1,10 @@
 ---
-import Index from "../index.astro"
-const title = 'Nps'
+import Base from "../../layouts/base.astro";
+import Workbench from "../../layouts/workbench.astro";
+const title = "Nps";
 ---
 
-<Index title={title} />
+<Base {...{ title }}>
+  <Workbench />
+</Base>
+<script src="../../assets/reviews/workbench.js"></script>

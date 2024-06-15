@@ -1,0 +1,21 @@
+---
+const {} = Astro.props;
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+---
+
+<section id="workbench-container" class="wb-container wb workbench-parent">
+  <ul class="wb-column wb-col col-wb wb-icons">
+    <li class="no-style"><Icon class="icon resize" name="happy" /></li>
+    <li class="no-style"><Icon class="icon resize" name="indifferent" /></li>
+    <li class="no-style"><Icon class="icon resize" name="sad" /></li>
+  </ul>
+  <div class="wb-column wb-col col-wb wb-colors">
+    <li class="no-style"><Icon class="icon resize" name="heart" /></li>
+    <li class="no-style"><Icon class="icon resize" name="brokenheart" /></li>
+  </div>
+  <div class="wb-column wb-col col-wb wb-misc">
+    <li class="no-style"><Icon class="icon resize" name="shake" /></li>
+    <li class="no-style"><Icon class="icon resize" name="kicked" /></li>
+  </div>
+</section>
