@@ -272,7 +272,7 @@ body {
 
 /* canvas */
 #canvas-container {
-  border: 16px solid #333;
+  border: 16px solid #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,14 +285,19 @@ body {
   align-items: center;
   justify-content: center;
   font-family:var(--font-family-default);
+  position:relative;
 }
 
 #selection-container {
   height: 85%;
-  width: 90%;
+  width: 50%;
   border: 2px solid #333;
   cursor: pointer;
   z-index: 998;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 #rating-container {
   height: 33%;
@@ -302,13 +307,18 @@ body {
   justify-content: center;
   position: relative;
   z-index: 999;
+  /* border:2px solid green; */
+  border-bottom:2px solid #000
 }
 .rating-sub{
   display: flex;
   width:85%;
+  /* border:2px solid red; */
+  height:100%;
 }
+/* options */
 #options-p1 {
-  height: 100%;
+  height: 125px;
   width: 100px;
   border: 2px solid #333;
   position: absolute;
@@ -326,15 +336,27 @@ body {
 }
  .opt-btn{
   width:100%;
+  text-align: center;
+  height:100%;
   border-bottom:4px solid #333;
   border-right:none;
   border-left:none;
   border-top:none;
  }
 .rating-item {
+  border-radius: 50%;
+}
+.sz-sm{
+  height: 50px;
+  width: 50px;
+}
+.sz-md{
+  height: 75px;
+  width: 75px;
+}
+.sz-lg{
   height: 100px;
   width: 100px;
-  border-radius: 50%;
 }
 .not-selected {
   border: 2px solid #333;
@@ -366,4 +388,8 @@ body {
 }
 .a-end {
   align-items: end;
+}
+.red-blink{
+  background:'red';
+  transition: .25s;
 }
