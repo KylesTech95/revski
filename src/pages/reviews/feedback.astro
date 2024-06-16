@@ -3,10 +3,22 @@ import Base from "../../layouts/base.astro";
 const title = "Feedback";
 import Workbench from "../../layouts/workbench.astro";
 import Canvas from "../../components/canvas.astro";
+import FeedbackOptions from "../../assets/tools/feedbackoptions.astro";
 ---
 
 <Base {...{ title }}>
   <Workbench />
-    <Canvas/>
+  <Canvas>
+    <ul id="rating-container" class="rating-wrapper">
+      <FeedbackOptions />
+      <div class="rating-sub j-center a-end">
+        {
+          new Array(5).fill("").map((_, i) => {
+            return <li class="rating-item resize-item not-selected" />;
+          })
+        }
+      </div>
+    </ul>
+  </Canvas>
 </Base>
 <script src="../../assets/reviews/workbench.js"></script>

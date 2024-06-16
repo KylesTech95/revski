@@ -1,8 +1,12 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <div id="canvas-container" class="canvas-border container-canvas">
-    
-  <div id="canvas" class="canvas-actual cv"></div>
+  <div id="canvas" class="canvas-actual cv">
+    <div id="selection-container">
+      <slot />
+    </div>
+  </div>
 </div>
+<script src="../assets/reviews/selection.js"></script>

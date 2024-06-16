@@ -118,7 +118,8 @@ body {
   align-items: center;
 }
 .li,
-.no-style {
+.no-style,
+.rating-item {
   list-style-type: none;
 }
 .border-bottom {
@@ -233,8 +234,8 @@ body {
     flex-direction: column;
     height: 75%;
   }
-  #canvas-container{
-    transform:translate(0,-80px)
+  #canvas-container {
+    transform: translate(0, -80px);
   }
 }
 
@@ -253,10 +254,13 @@ body {
   overflow: hidden;
   overflow-x: scroll;
 }
-.wb-column::-webkit-scrollbar {
+.wb-column::-webkit-scrollbar,
+.options-scroll::-webkit-scorllbar
+ {
   display: none;
 }
-.wb-column {
+.wb-column,
+.options-scroll {
   scrollbar-width: none;
 }
 .no-style {
@@ -276,4 +280,90 @@ body {
 }
 #canvas {
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family:var(--font-family-default);
+}
+
+#selection-container {
+  height: 85%;
+  width: 90%;
+  border: 2px solid #333;
+  cursor: pointer;
+  z-index: 998;
+}
+#rating-container {
+  height: 33%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 999;
+}
+.rating-sub{
+  display: flex;
+  width:85%;
+}
+#options-p1 {
+  height: 100%;
+  width: 100px;
+  border: 2px solid #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+  overflow-y:scroll;
+}
+.flex-options{
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: center;
+  gap:2px;
+}
+ .opt-btn{
+  width:100%;
+  border-bottom:4px solid #333;
+  border-right:none;
+  border-left:none;
+  border-top:none;
+ }
+.rating-item {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.not-selected {
+  border: 2px solid #333;
+}
+.current-selection {
+  border: 2px dotted #333;
+}
+
+.j-center {
+  justify-content: center;
+}
+.j-space-evenly {
+  justify-content: space-evenly;
+}
+.j-start {
+  justify-content: start;
+}
+.j-end {
+  justify-content: end;
+}
+.a-center {
+  align-items: center;
+}
+.a-space-evenly {
+  align-items: space-evenly;
+}
+.a-start {
+  align-items: start;
+}
+.a-end {
+  align-items: end;
 }
